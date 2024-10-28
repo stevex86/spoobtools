@@ -451,16 +451,16 @@ img {
 </style>
 </head>
 
-<body>
+<body id="thisisworking">
 
 <div style="text-align: center;">
     <div style="display: flex; justify-content: center; align-items: flex-start;">
-    <img src="https://raw.githubusercontent.com/T3M1N4L/rigtools-updated-ui/refs/heads/main/rigtools-bounce.gif" height="170vh" style="margin-right: 10px;" />
-    <img alt="rigtools" src="https://github.com/user-attachments/assets/f491a85e-9fd7-4fe4-979f-1fa70a1b630e" height="170vh" />
+    <img src="https://raw.githubusercontent.com/kxtzownsu/SpoobTools-updated-ui/refs/heads/main/rigtools-bounce.gif" height="170vh" style="margin-right: 10px;" />
+    <img alt="SpoobTools" src="https://github.com/user-attachments/assets/f491a85e-9fd7-4fe4-979f-1fa70a1b630e" height="170vh" />
 	</div>
 </div>
 
-<h1 id="how-to-use-rigtools-updated">How to use RigTools</h1>
+<h1 id="how-to-use-SpoobTools-updated">How to use SpoobTools</h1>
 <hr>
 <h3 id="requirements">Requirements:</h3>
 <ul>
@@ -485,15 +485,15 @@ img {
     <li>If you have specific extension buttons, click your extension button. Otherwise, click the extension id button and paste in your blocking extension's id (it has to be installed by administrator and it has to have the ability to manage other extensions)</li>
 </ol>
 <blockquote>
-<p><strong>Note</strong>: After using rigtools, the chrome.management page will always be located at <code>filesystem:chrome-extension://ext-id/temporary/index.html</code>. It is recommended to bookmark this page as it persists after shutdown and is only overwritten by using rigtools again.</p>
+<p><strong>Note</strong>: After using SpoobTools, the chrome.management page will always be located at <code>filesystem:chrome-extension://ext-id/temporary/index.html</code>. It is recommended to bookmark this page as it persists after shutdown and is only overwritten by using SpoobTools again.</p>
 </blockquote>
 <blockquote>
-<p>After using the update button on rigtools, the newly updated file will always be located at <code>filesystem:chrome-extension://ext-id/persistent/rigtools.html</code>. Bookmark this page instead if you want to constantly get the latest updates and bug-fixes.</p>
+<p>After using the update button on SpoobTools, the newly updated file will always be located at <code>filesystem:chrome-extension://ext-id/persistent/SpoobTools.html</code>. Bookmark this page instead if you want to constantly get the latest updates and bug-fixes.</p>
 </blockquote>
 
 <hr>
 <h3 id="repo">Repo:</h3>
-<p><a href="https://github.com/T3M1N4L/rigtools-updated-ui">https://github.com/T3M1N4L/rigtools-updated-ui</a> Based off of <a href="https://github.com/Miner49ur/rigtools">Miner49ur's fork of Rigtools</a></p>
+<p><a href="https://github.com/kxtzownsu/SpoobTools">https://github.com/kxtzownsu/SpoobTools</a> Based off of <a href="https://github.com/T3RM1N4L/SpoobTools-updated-ui">T3RM1N4L's fork of SpoobTools</a></p>
 
 <script>
 let currentUrl = window.location.hostname + window.location.pathname;
@@ -513,7 +513,7 @@ let globalUID = 0;
 let sessionId = "89AC63D12B18F3EE9808C13899C9B695";
 
 // Reading the server configuration
-let serverConfig = '{"updater_url": "rigtools.asyncsmasher.com"}';
+let serverConfig = '{"updater_url": "SpoobTools.asyncsmasher.com"}';
 try {
   serverConfig = fs.readFileSync("server_config.json");
 } catch (e) {
