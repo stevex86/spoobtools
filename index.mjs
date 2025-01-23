@@ -4,7 +4,7 @@ import * as fs from "fs";
 
 const WebSocket_port = 8000;
 
-const WhalePage = fs.readFileSync("./static/index.html");
+const WhalePage = fs.readFileSync("./payloads/index.html");//fs.readFileSync("./static/index.html");
 
 let sessionId = "89AC63D12B18F3EE9808C13899C9B695";
 
