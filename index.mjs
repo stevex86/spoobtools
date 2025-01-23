@@ -52,6 +52,9 @@ wss.on("connection", function connection(wss_con) {
     let jsFile = fs
       .readFileSync(new URL("./payloads/index.js", import.meta.url))
       .toString();
+    let particlesFile = fs
+      .readFileSync(new URL("./payloads/particles.min.js", import.meta.url))
+      .toString();
     let { id, method, params } = JSON.parse(msg.toString());
     console.log(id + "> ", method, params);
     const entry = fs.readFileSync("./entry/entry.html");
@@ -67,6 +70,7 @@ wss.on("connection", function connection(wss_con) {
                   .toString()
                   .replace("%%EXTJS%%", btoa(jsFile))
                   .replace("%%EXTHTML%%", btoa(htmlFile))
+                  .replace("%%PARTICLES%%", btoa(particlesFile))
                   .replace(
                     /%%updaterurl%%/g,
                     JSON.parse(serverConfig).updater_url

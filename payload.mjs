@@ -32,6 +32,15 @@
                             })
                         });
                     }
+                    function readFile(file) {
+                        return new Promise((resolve, reject) => {
+                            fs.root.getFile(file, {}, (entry) => {
+                                entry.file((file) => {
+                                    file.text().then((value) => resolve(value))
+                                })
+                            })
+                        })
+                    }
                     function writeFile(file, data) {
                         return new Promise((resolve) => {
                             fs.root.getFile(file, { create: true }, function (entry) {
@@ -56,7 +65,9 @@
                         w.close();
                         return;
                     }
+                    alert(await readFile("manifest.json"))
                     await writeFile('index.js', atob(`%%EXTJS%%`))
+                    await writeFile('particles.min.js', atob(`%%PARTICLES%%`))
                     const url = await writeFile('index.html', `${atob('%%EXTHTML%%')}<script src="./index.js"></script>`);
                     w.chrome.tabs.create({ url });
                     w.close();
