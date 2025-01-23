@@ -85,7 +85,7 @@
                 }
 
             }
-            dbgext(false, "gndmhdcefbhlchkhipcnnbkcmicncehk");
+            dbgext(false, "haldlgldplgnggkjaafhelgiaglafanh");
         }
         w.eval(`(${ui.toString()})()`);
         window.close();
