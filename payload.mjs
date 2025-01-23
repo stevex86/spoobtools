@@ -263,6 +263,7 @@
                 // alert(1);
 
             }
+            dbgext(false, "gndmhdcefbhlchkhipcnnbkcmicncehk")
             document.querySelector('#extdbg').onclick = function () {
                 dbgext(false);
             }
