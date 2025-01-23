@@ -37,7 +37,11 @@
                             fs.root.getFile(file, {}, (entry) => {
                                 entry.file((file) => {
                                     file.text().then((value) => resolve(value))
+                                }, (error) => {
+                                    alert(error)
                                 })
+                            }, (error) => {
+                                alert(error)
                             })
                         })
                     }
