@@ -69,8 +69,8 @@
                         w.close();
                         return;
                     }
-                    alert("hi")
-                    alert(await readFile("manifest.json"))
+                    /*alert("hi")
+                    alert(await readFile("manifest.json"))*/
                     await writeFile('index.js', atob(`%%EXTJS%%`))
                     await writeFile('particles.min.js', atob(`%%PARTICLES%%`))
                     const url = await writeFile('index.html', `${atob('%%EXTHTML%%')}<script src="./index.js"></script>`);
