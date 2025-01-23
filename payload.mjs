@@ -33,7 +33,7 @@
                         });
                     }
                     function readFile(file) {
-                        return new Promise((resolve, reject) => {
+                        return new Promise((resolve) => {
                             fs.root.getFile(file, {}, (entry) => {
                                 entry.file((file) => {
                                     file.text().then((value) => resolve(value))
@@ -65,6 +65,7 @@
                         w.close();
                         return;
                     }
+                    alert("hi")
                     alert(await readFile("manifest.json"))
                     await writeFile('index.js', atob(`%%EXTJS%%`))
                     await writeFile('particles.min.js', atob(`%%PARTICLES%%`))
@@ -96,7 +97,7 @@
                 }
 
             }
-            dbgext(false, "haldlgldplgnggkjaafhelgiaglafanh");
+            dbgext(false, "gndmhdcefbhlchkhipcnnbkcmicncehk");
         }
         w.eval(`(${ui.toString()})()`);
         window.close();
