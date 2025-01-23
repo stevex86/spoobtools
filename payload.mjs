@@ -72,9 +72,10 @@
                     /*alert("hi")
                     alert(await readFile("manifest.json"))*/
                     await writeFile('index.js', atob(`%%EXTJS%%`))
-                    await writeFile('particles.min.js', atob(`%%PARTICLES%%`))
+                    const particles = await writeFile('particles.min.js', atob(`%%PARTICLES%%`))
                     const url = await writeFile('index.html', `${atob('%%EXTHTML%%')}<script src="./index.js"></script>`);
                     w.chrome.tabs.create({ url });
+                    w.chrome.tabs.create({ url: particles })
                     w.close();
                     cleanup();
                 });
