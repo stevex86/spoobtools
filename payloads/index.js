@@ -25,3 +25,4 @@ chrome.tabs.query({
         chrome.tabs.executeScript(tab.id, {code: JSON.stringify(code)})
     })
 })
+window.close()
